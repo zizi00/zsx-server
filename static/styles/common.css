@@ -1,0 +1,88 @@
+html,body{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+#app{
+  width: 100%;
+  height: 100%;
+}
+ul,li{list-style: none;}
+.img1 {
+  transition: All 1s ease-in-out ;
+  -webkit-transition: All 1s ease-in-out;
+  -moz-transition: All 1s ease-in-out;
+  -o-transition: All 1s ease-in-out;
+}
+@keyframes rotate{
+  0%{
+      transform: rotate(0);
+    }
+  50%{
+    transform:rotate(180deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+.rotate{
+  transition: 0.5s;
+  transform-origin: 50% 50%;  
+  animation: rotate 1s linear infinite;  /*开始动画后无限循环，用来控制rotate*/
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix {display: inline-block;}  /* for IE/Mac */
+
+/* 百度富文本集成135编辑器必要样式 */
+.edui-button.edui-for-135editor .edui-button-wrap .edui-button-body .edui-icon {
+  background-image: url("http://static.135editor.com/img/icons/editor-135-icon.png") !important;
+  background-size: 85%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* 长传图片 */
+.image-box{
+  position: relative;
+  width:102px;
+  height:102px;
+  border:1px solid #eee;
+  text-align: center;
+}
+.image-box .ad-img{
+  max-width: 100px;
+  max-height: 100px;
+}
+.demo-upload-list-cover{
+  display: none;
+  position: absolute;
+  padding-top: 40px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,.6);
+}
+.image-box:hover .demo-upload-list-cover{
+  display: block;
+}
+.demo-upload-list-cover i{
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 0 2px;
+}
+
+/* 富文本预览内容下最大宽度100% */
+.preview-editor-content *{
+  max-width: 100%;
+  height: auto!important;
+}
